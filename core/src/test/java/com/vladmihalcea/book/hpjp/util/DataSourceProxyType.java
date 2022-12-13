@@ -20,6 +20,7 @@ public enum DataSourceProxyType {
             SLF4JQueryLoggingListener loggingListener = new SLF4JQueryLoggingListener();
             loggingListener.setQueryLogEntryCreator(new InlineQueryLogEntryCreator());
             listener.addListener(loggingListener);
+            // NOTE Try with SingleQueryCountHolder for multi tenancy
             listener.addListener(new DataSourceQueryCountListener());
             return ProxyDataSourceBuilder
                     .create(dataSource)

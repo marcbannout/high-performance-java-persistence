@@ -37,6 +37,7 @@ public class PostgreSQLDataSourceProvider implements DataSourceProvider {
         dataSource.setServerName("localhost");
         dataSource.setUser("postgres");
         dataSource.setPassword("admin");
+        dataSource.setPortNumbers(new int[]{6543}); // TODO tmp fix
         if (reWriteBatchedInserts != null) {
             dataSource.setReWriteBatchedInserts(reWriteBatchedInserts);
         }

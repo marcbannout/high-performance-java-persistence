@@ -11,13 +11,13 @@ services:
   postgres:
     image: postgres:12.5
     environment:
-      POSTGRES_DB: high_performance_java_persistence 
+      POSTGRES_DB: high_performance_java_persistence
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
     volumes:
       - mypostgresdata:/var/lib/postgresql/data
     ports:
-      - 5432:5432
+      - "6543:5432"
     restart: on-failure
 
   mysql:
@@ -42,7 +42,7 @@ services:
       MYSQL_PID: Express
     volumes:
       - mysqldata:/var/opt/mssql
-    ports: 
+    ports:
       - 1433:1433
     restart: on-failure
 

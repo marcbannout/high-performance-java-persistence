@@ -68,7 +68,7 @@ public class SQLStatementCountValidatorTest extends AbstractTest {
 
             assertEquals(2, comments.size());
 
-            SQLStatementCountValidator.assertSelectCount(1);
+            SQLStatementCountValidator.assertSelectCount(1); // NOTE test the fetch strategy
         });
     }
 
